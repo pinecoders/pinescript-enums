@@ -1,0 +1,20 @@
+//@version=5
+
+enum LineExtend
+	None = 'None'
+	Left = 'To Left'
+	Right = 'To Right'
+	Both = 'Both'
+
+_lineExtend(LineExtend inputOption) =>
+	switch inputOption
+		LineExtend.None => extend.none
+		LineExtend.Left => extend.left
+		LineExtend.Right => extend.right
+		LineExtend.Both => extend.both
+		=> extend.none
+
+var lineExtend = _lineExtend(input.enum(
+	 title = 'Line Extending'
+	 , defval = LineExtend.None
+	 ))

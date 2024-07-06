@@ -1,0 +1,18 @@
+//@version=5
+
+enum LineStyle
+	Solid = 'Solid'
+	Dotted = 'Dotted'
+	Dashed = 'Dashed'
+
+_lineStyle(LineStyle inputOption) =>
+	switch inputOption
+		LineStyle.Solid => line.style_solid
+		LineStyle.Dotted => line.style_dotted
+		LineStyle.Dashed => line.style_dashed
+		=> line.style_solid
+
+var lineStyle = _lineStyle(input.enum(
+	 title = 'Line Style'
+	 , defval = LineStyle.Solid
+	 ))

@@ -1,0 +1,30 @@
+//@version=5
+
+enum Position
+	TopLeft = 'Top Left'
+	TopCenter = 'Top Center'
+	TopRight = 'Top Right'
+	MiddleLeft = 'Middle Left'
+	MiddleCenter = 'Middle Center'
+	MiddleRight = 'Middle Right'
+	BottomLeft = 'Bottom Left'
+	BottomCenter = 'Bottom Center'
+	BottomRight = 'Bottom Right'
+
+_tablePosition(Position inputOption) =>
+	switch inputOption
+		Position.TopLeft => position.top_left
+		Position.TopCenter => position.top_center
+		Position.TopRight => position.top_right
+		Position.MiddleLeft => position.middle_left
+		Position.MiddleCenter => position.middle_center
+		Position.MiddleRight => position.middle_right
+		Position.BottomLeft => position.bottom_left
+		Position.BottomCenter => position.bottom_center
+		Position.BottomRight => position.bottom_right
+		=> position.bottom_right
+
+var tablePosition = _tablePosition(input.enum(
+	 title = 'Table Position'
+	 , defval = Position.TopRight
+	 ))

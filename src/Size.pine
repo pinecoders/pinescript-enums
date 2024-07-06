@@ -1,0 +1,24 @@
+//@version=5
+
+enum Size
+	Auto = 'Auto'
+	Tiny = 'Tiny'
+	Small = 'Small'
+	Normal = 'Normal'
+	Large = 'Large'
+	Huge = 'Huge'
+
+_size(Size inputOption) =>
+	switch inputOption
+		Size.Auto => size.auto
+		Size.Tiny => size.tiny
+		Size.Small => size.small
+		Size.Normal => size.normal
+		Size.Large => size.large
+		Size.Huge => size.huge
+		=> size.auto
+
+var smthSize = _size(input.enum(
+	 title = 'Something Size'
+	 , defval = Size.Tiny
+	 ))

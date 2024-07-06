@@ -1,0 +1,28 @@
+//@version=5
+
+enum Weekdays
+	Monday = 'Monday'
+	Tuesday = 'Tuesday'
+	Wednesday = 'Wednesday'
+	Thursday = 'Thursday'
+	Friday = 'Friday'
+	Saturday = 'Saturday'
+	Sunday = 'Sunday'
+
+enum Weekdays3
+	Mon = 'Mon'
+	Tue = 'Tue'
+	Wed = 'Wed'
+	Thu = 'Thu'
+	Fri = 'Fri'
+	Sat = 'Sat'
+	Sun = 'Sun'
+
+enum Weekdays2
+	Mo = 'Mo'
+	Tu = 'Tu'
+	We = 'We'
+	Th = 'Th'
+	Fr = 'Fr'
+	Sa = 'Sa'
+	Su = 'Su'

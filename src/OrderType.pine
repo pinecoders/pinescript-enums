@@ -1,0 +1,7 @@
+//@version=5
+
+enum OrderType
+	Market = 'Market Order'
+	Limit = 'Limit Order'
+	Stop = 'Stop Order'
+	StopLimit = 'Stop-Limit Order'

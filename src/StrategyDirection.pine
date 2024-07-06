@@ -1,0 +1,18 @@
+//@version=5
+
+enum StrategyDirection
+	Long = 'Long'
+	Short = 'Short'
+	Both = 'Long & Short'
+
+_strategyDirection(StrategyDirection inputOption) =>
+	switch inputOption
+		StrategyDirection.Long => strategy.direction.long
+		StrategyDirection.Short => strategy.direction.short
+		StrategyDirection.Both => strategy.direction.all
+		=> strategy.direction.all
+
+var strategyDir = _strategyDirection(input.enum(
+	 title = 'Strategy Direction'
+	 , defval = StrategyDirection.Both
+	 ))
